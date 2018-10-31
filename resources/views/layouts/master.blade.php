@@ -333,15 +333,14 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-
-        <li>
+        <li class="{{ request()->is('coba1') ? 'active' : '' }}">
           <a href="coba1">
             <i class="fa fa-comment"></i><span>Coba 1</span>
           </a>
         </li>
-        <li>
+        <li class="{{ request()->is('coba2') ? 'active' : '' }}">
           <a href="coba2">
-            <i class="fa fa-comment"></i><span>Coba 2</span>
+            <i class="fa fa-tag"></i><span>Coba 2</span>
           </a>
         </li>
 
