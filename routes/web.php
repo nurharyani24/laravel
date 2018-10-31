@@ -38,3 +38,9 @@ Route::get('coba1', function () { // dijalankan url sbg /template
 Route::get('coba2', function () { // dijalankan url sbg /template
     return view('coba2'); // layouts --> folder, master --> nama filenya
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
