@@ -86,7 +86,7 @@
                     <a href="pesan">Pesan</a>
                     <a href="about">About</a>
                     <a href="coba1">Template</a>
-                    
+                    <a href="upload">Upload</a>
                 </div>
             </div>
         </div>

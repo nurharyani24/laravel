@@ -56,5 +56,15 @@ Route::prefix('admin')->group(function() {
     Route::get('/password/reset', 'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
     Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
+
+    Route::resource('manageadmins', 'ManageAdminController');
 });
+
+Route::get('upload',['as'=>'upload.index','uses'=>'UploadController@index']);
+// untuk menampilkan form nya.
+Route::get('upload/create',['as'=>'upload.create','uses'=>'UploadController@create']);
+// untuk memproses
+Route::post('upload',['as'=>'upload.store','uses'=>'UploadController@store']);
+
+
 
